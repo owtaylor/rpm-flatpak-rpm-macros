@@ -1,6 +1,6 @@
 Name:           flatpak-rpm-macros
 Version:        26
-Release:        1%{?dist}
+Release:        2%{?dist}
 BuildArch:      noarch
 Summary:        Macros for building RPMS for flatpaks
 Source0:        macros.flatpak
@@ -22,5 +22,8 @@ install -t $RPM_BUILD_ROOT%{_sysconfdir}/rpm -m 644 %{SOURCE0}
 %{_sysconfdir}/rpm/*
 
 %changelog
+* Wed May 31 2017 Owen Taylor <otaylor@redhat.com> - 26-2
+- Don't override %%dist
+
 * Wed May 31 2017 Owen Taylor <otaylor@redhat.com> - 26-1
 - Initial version
